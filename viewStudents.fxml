@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mycompany.application.ViewStudents">
+
+    <children>
+
+        <Label text="View Students"/>
+
+        <TableView fx:id="studentsTable" prefHeight="300" prefWidth="600">
+
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="150"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="250"/>
+                <TableColumn fx:id="majorColumn" text="Major" prefWidth="150"/>
+            </columns>
+
+        </TableView>
+
+        <Button text="Load Students" onAction="#loadStudents"/>
+        <Button text="Back" onAction="#handleBack"/>
+    </children>
+
+</VBox>
